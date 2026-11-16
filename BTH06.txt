@@ -1,0 +1,27 @@
+[Bài thực hành 6] Chuẩn hóa dữ liệu sinh viên thành JSON
+[Context]
+Hệ thống quản lý đào tạo cần chuẩn hóa dữ liệu sinh viên thô từ nhiều nguồn khác nhau thành định dạng JSON chuẩn.
+[Request]
+Đọc danh sách sinh viên đầu vào, chuẩn hóa trạng thái học tập và chuyển đổi thành định dạng JSON kèm tổng số lượng bản ghi.
+[Explanation]
+Dữ liệu đầu vào gồm họ tên, email và trạng thái cần được bóc tách và map chính xác vào các trường `fullName`, `email`, `status`. Trạng thái chỉ được nhận 1 trong 3 giá trị cho phép; nếu không xác định phải gán nhãn "UNKNOWN".
+[Action]
+Xử lý danh sách sau:
+Nguyễn Văn An - an.nguyen@gmail.com - đang học
+Trần Thị Bình - binhtt@gmail.com - bảo lưu
+Lê Hoàng Nam - nam.le@gmail.com - đang học
+Phạm Minh Đức - duc.pham@gmail.com - nghỉ học
+[Tone]
+Khách quan, chính xác, tuân thủ tuyệt đối cấu trúc dữ liệu kỹ thuật.
+[Extras]
+Chỉ trả về JSON thô (Raw JSON), tuyệt đối không dùng Markdown Code Fence, không giải thích ngoài JSON. Cấu trúc yêu cầu:
+{
+  "students": [
+    {
+      "fullName": "...",
+      "email": "...",
+      "status": "..."
+    }
+  ],
+  "totalRecords": 4
+}
